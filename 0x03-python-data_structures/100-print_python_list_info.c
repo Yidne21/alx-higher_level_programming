@@ -1,4 +1,7 @@
 #include <Python.h>
+#include <oject.h>
+#include <listobject.h>
+#include <stdio.h>
 /**
  * print_python_list - prints basic python info
  * @p: pointer to python object

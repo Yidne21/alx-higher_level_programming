@@ -1,11 +1,7 @@
 #!/usr/bin/python3
+""" Square class with getter, setter and initilizer method
+"""
 class Square:
-    """Square Class
-
-    A Square Class
-
-    """
-
     def __init__(self, size=0):
         """__init__
 
@@ -31,6 +27,8 @@ class Square:
 
     @property
     def size(self):
+        """Returns the value of __size
+        """
         return self.__size
 
     @size.setter
@@ -64,6 +62,8 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
+        """Prints # until self.area() + 1
+        """
         if self.__size == 0:
             print()
             return None

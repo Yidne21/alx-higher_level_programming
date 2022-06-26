@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """square class with private attribute size and method area"""
 class Square:
+    """initialization of size by __init__ mmethod and returning the area using the area method"""
     def __init__(self, size=0):
 
         if type(size) is not int:

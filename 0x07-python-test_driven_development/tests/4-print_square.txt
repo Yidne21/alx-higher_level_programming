@@ -1,0 +1,58 @@
+Test cases for '4-print_square.py'
+
+Import 'print_square'
+>>> print_square = __import__('4-print_square').print_square
+
+Cases to be evaluated:
+
+Case 1: Test with no arguments
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+Case 2: Test with size as NULL
+>>> print_square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Case 3: Test with size as a string
+>>> print_square("Yidne")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Case 4: Test with size as positive float
+>>> print_square(6.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Case 5: Test with size as negative float
+>>> print_square(-7.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Case 6: Test with size as zero
+>>> print_square(0)
+
+
+Case 7: Test with two arguments
+>>> print_square(5, 7)
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+Case 8: Test with negative integer
+>>> print_square(-7)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+Case 9: Test with positive integer
+>>> print_square(3)
+###
+###
+###

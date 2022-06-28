@@ -1,0 +1,93 @@
+Test cases for '0-add_integer.py'
+===============================
+
+Adds
+Import 'add_integer'
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Cases to be evaluated:
+
+Case 1: test with no arguments
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Case 2: test with NUll variables to both a and b
+>>> add_integer(None, None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Case 3: test with Null variable to 'b'
+>>> add_integer(2, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+case 4: test with Null variable to 'a'
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+Case 5: test with one argument(int)
+>>> add_integer(20)
+118
+
+Case 6: test with two arguments(int)
+>>> add_integer(3, 2)
+5
+
+Case 7: test with more than two arguments(int)
+>>> add_integer(3, 4, 2)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Case 8: test adding between floats
+>>> add_integer(3.5, 3.5)
+6
+
+Case 9: test 'a' as a string
+>>> add_integer("Yidne", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Case 10: test 'b' as a string
+>>> add_integer(2, "ALX")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Case 11: test with both 'a' and 'b' as strings
+>>> add_integer("Yidne", "ALX")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Case 12: test with 'a' as a complex number
+>>> add_integer(3+2j, 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Case 13: test with 'b' as a complex number
+>>> add_integer(5, 5+2j)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+Case 14: test with both 'a' and 'b' as complex numbers
+>>> add_integer(5+3j, 4+3j)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Case 15: test with 'a' as infinity
+>>> add_integer(float('inf'), 2)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer

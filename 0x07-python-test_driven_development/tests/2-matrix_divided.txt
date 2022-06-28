@@ -1,0 +1,81 @@
+Test case for '2-matrix_divided.py'
+
+Import 'matrix_divided'
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test Cases:
+
+Case 1: test div as NULL
+>>> matrix = [[1, 2, 3], [4, 5, 6]] 
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+Case 2: test div ans zero
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+Case 3: test div as float
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 2.5)
+[[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
+
+Case 4: test div as string
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, "Yidne")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+Case 5: test with no arguments
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Case 6: test with 1 argument (matrix)
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Case 7: test with div as a complex number
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 4+4j)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+Case 8: test with div as infinity
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Case 9: test with matrix not a list
+>>> matrix_divided("Yidne", 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Case 10: test with different sizes of matrix
+>>> matrix = [[1, 2, 3], [4, 5]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matri must have the same size
+
+Case 11: test with empty matrix
+>>> matrix = []
+>>> matrix_divided(matrix, 2)
+[]
+
+Case 12: test with div as int
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]

@@ -1,0 +1,43 @@
+Test cases for '5-text_indentation.py'
+
+Import 'text_indentation'
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Cases to be evaluated:
+
+Case 1: Test with text as empty
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Case 2: Test with text a NULL
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Case 3: Test with text as integer
+>>> text_indentation(6)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Case 4: Test with text as float
+>>> text_indentation(8.5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Case 5: Test with empty string
+>>> text_indentation("")
+
+
+Case 6: Test with text as ., ?, :
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>

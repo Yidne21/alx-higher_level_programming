@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module which divides all elements of the given matrix with a given divisor"""
 def matrix_divided(matrix, div):
-"""Function which divides all elements of the given matrix with a given divisor and returnes the new matrix"""
+    """Function which divides all elements of the given matrix with a given divisor and returnes the new matrix"""
 
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")

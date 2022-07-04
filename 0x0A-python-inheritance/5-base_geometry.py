@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module which has an Empty class
+Module which has an Empty super class BaseGeometry
 """
 
 

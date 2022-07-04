@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module which have a function to check an onject is instance or not
+"""
+
+
 def is_kind_of_class(obj, a_class):
     """
     Checks if `obj` is the same class or inherit from `a_class`

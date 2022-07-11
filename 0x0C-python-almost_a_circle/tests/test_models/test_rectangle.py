@@ -4,7 +4,6 @@ A module that test differents behaviors
 of the Base class
 """
 import unittest
-import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -13,17 +12,6 @@ class TestRectangle(unittest.TestCase):
     """
     A class to test the Rectangle Class
     """
-    def test_pep8_base(self):
-        """
-        Test that checks PEP8
-        """
-        syntax = pep8.StyleGuide(quit=True)
-        check = syntax.check_files(['models/rectangle.py'])
-        self.assertEqual(
-            check.total_errors, 0,
-            "Found code style errors (and warnings)."
-        )
-
     def test_rectangle_subclass(self):
         """
         Test if Rectangle class inherit from

@@ -13,7 +13,6 @@ if __name__ == "__main__":
         _type = type(content)
         _content = content
         _utf8_c = utf8_content
-
         print('Body response:')
         print('\t- type: {}'.format(_type))
         print('\t- content: {}'.format(_content))

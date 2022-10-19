@@ -4,6 +4,7 @@ to `http://0.0.0.0:5000/search_user` with the
 letter as a parameter and with `requests` module.
 """
 
+
 from sys import argv
 import requests
 
